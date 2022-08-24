@@ -1,0 +1,410 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>설문조사</title>
+  </head>
+  <style>
+    td {
+      border: 1px solid black;
+      border-left: 0px;
+      border-right: 0px;
+      box-sizing: border-box;
+      padding: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .bac {
+      background-color: lightblue;
+    }
+    .txt {
+      text-align: right;
+    }
+    .txt2 {
+      color: lightgray;
+      text-align: left;
+    }
+    .col {
+      color: red;
+    }
+  </style>
+  <body>
+    <div style="width: 100%">
+      <div style="width: 100%; height: 20px"></div>
+      <div style="width: 100%">
+        <table>
+          <col style="width: 300px" />
+          <col style="width: 1400px" />
+          <tbody>
+            <!-- 1st -->
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>설문조사 명 </span>
+              </td>
+              <td style="border-bottom: 0px">
+                <input type="text" id="text1" name="text" />
+              </td>
+            </tr>
+            <tr class="txt2">
+              <td style="border-top: 0px">
+                * 한글기준 200자 이내로 작성하셔야 합니다.
+              </td>
+            </tr>
+            <!-- 2st -->
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>설문조사 취지내용 </span>
+              </td>
+              <td style="border-bottom: 0px">
+                <textarea cols="100" rows="10"></textarea>
+              </td>
+            </tr>
+            <tr class="txt2">
+              <td style="border-top: 0px">
+                * 한글기준 4000자 이내로 작성하셔야 합니다.
+              </td>
+            </tr>
+            <tr>
+              <td class="bac txt">
+                <span class="col">*</span>
+                <span>설문조사 게시기간 </span>
+              </td>
+              <td>
+                <input type="date" id="birthday" />
+                <select name="time" id="시">
+                  <option value="am00">00</option>
+                  <option value="am01">01</option>
+                  <option value="am02">02</option>
+                  <option value="am03">03</option>
+                  <option value="am04">04</option>
+                  <option value="am05">05</option>
+                  <option value="am06">06</option>
+                  <option value="am07">07</option>
+                  <option value="am08">08</option>
+                  <option value="am09">09</option>
+                  <option value="am10">10</option>
+                  <option value="am11">11</option>
+                  <option value="pm">12</option>
+                </select>
+                <span>시</span>
+                <select name="time2" id="분">
+                  <option value="am00">00</option>
+                  <option value="am01">01</option>
+                  <option value="am02">02</option>
+                  <option value="am03">03</option>
+                  <option value="am04">04</option>
+                  <option value="am05">05</option>
+                  <option value="am06">06</option>
+                  <option value="am07">07</option>
+                  <option value="am08">08</option>
+                  <option value="am09">09</option>
+                  <option value="am10">10</option>
+                  <option value="am11">11</option>
+                  <option value="pm">12</option>
+                </select>
+                <span>분 ~</span>
+                <input type="date" id="birthday" />
+                <select name="time" id="시">
+                  <option value="am00">00</option>
+                  <option value="am01">01</option>
+                  <option value="am02">02</option>
+                  <option value="am03">03</option>
+                  <option value="am04">04</option>
+                  <option value="am05">05</option>
+                  <option value="am06">06</option>
+                  <option value="am07">07</option>
+                  <option value="am08">08</option>
+                  <option value="am09">09</option>
+                  <option value="am10">10</option>
+                  <option value="am11">11</option>
+                  <option value="pm">12</option>
+                </select>
+                <span>시</span>
+                <select name="time2" id="분">
+                  <option value="am00">00</option>
+                  <option value="am01">01</option>
+                  <option value="am02">02</option>
+                  <option value="am03">03</option>
+                  <option value="am04">04</option>
+                  <option value="am05">05</option>
+                  <option value="am06">06</option>
+                  <option value="am07">07</option>
+                  <option value="am08">08</option>
+                  <option value="am09">09</option>
+                  <option value="am10">10</option>
+                  <option value="am11">11</option>
+                  <option value="pm">12</option>
+                </select>
+                <span>분</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="bac txt">
+                <span class="col">*</span>
+                <span>설문조사 응답기간 </span>
+              </td>
+              <td>
+                <input type="date" id="birthday" />
+                <select name="time" id="시">
+                  <option value="am00">00</option>
+                  <option value="am01">01</option>
+                  <option value="am02">02</option>
+                  <option value="am03">03</option>
+                  <option value="am04">04</option>
+                  <option value="am05">05</option>
+                  <option value="am06">06</option>
+                  <option value="am07">07</option>
+                  <option value="am08">08</option>
+                  <option value="am09">09</option>
+                  <option value="am10">10</option>
+                  <option value="am11">11</option>
+                  <option value="pm">12</option>
+                </select>
+                <span>시</span>
+                <select name="time2" id="분">
+                  <option value="am00">00</option>
+                  <option value="am01">01</option>
+                  <option value="am02">02</option>
+                  <option value="am03">03</option>
+                  <option value="am04">04</option>
+                  <option value="am05">05</option>
+                  <option value="am06">06</option>
+                  <option value="am07">07</option>
+                  <option value="am08">08</option>
+                  <option value="am09">09</option>
+                  <option value="am10">10</option>
+                  <option value="am11">11</option>
+                  <option value="pm">12</option>
+                </select>
+                <span>분 ~</span>
+                <input type="date" id="birthday" />
+                <select name="time" id="시">
+                  <option value="am00">00</option>
+                  <option value="am01">01</option>
+                  <option value="am02">02</option>
+                  <option value="am03">03</option>
+                  <option value="am04">04</option>
+                  <option value="am05">05</option>
+                  <option value="am06">06</option>
+                  <option value="am07">07</option>
+                  <option value="am08">08</option>
+                  <option value="am09">09</option>
+                  <option value="am10">10</option>
+                  <option value="am11">11</option>
+                  <option value="pm">12</option>
+                </select>
+                <span>시</span>
+                <select name="time2" id="분">
+                  <option value="am00">00</option>
+                  <option value="am01">01</option>
+                  <option value="am02">02</option>
+                  <option value="am03">03</option>
+                  <option value="am04">04</option>
+                  <option value="am05">05</option>
+                  <option value="am06">06</option>
+                  <option value="am07">07</option>
+                  <option value="am08">08</option>
+                  <option value="am09">09</option>
+                  <option value="am10">10</option>
+                  <option value="am11">11</option>
+                  <option value="pm">12</option>
+                </select>
+                <span>분</span>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>설문조사 시작안내문 </span>
+              </td>
+              <td style="border-bottom: 0px">
+                <textarea cols="100" rows="10"></textarea>
+              </td>
+            </tr>
+            <tr class="line txt2">
+              <td style="border-top: 0px">
+                * 한글기준 2000자 이내로 작성하셔야 합니다.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>설문조사 종료안내문 </span>
+              </td>
+              <td style="border-bottom: 0px">
+                <textarea cols="100" rows="10"></textarea>
+              </td>
+            </tr>
+            <tr class="line txt2">
+              <td style="border-top: 0px">
+                * 한글기준 2000자 이내로 작성하셔야 합니다.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span
+                  >개인정보 수집형 <br />
+                  질문 사용
+                </span>
+              </td>
+              <td style="border-bottom: 0px">
+                <input type="checkbox" id="checkbox" />
+                <label for=""> 사용 </label>
+              </td>
+            </tr>
+            <tr class="line txt2">
+              <td style="border-top: 0px">
+                * 개인정보수집형 질문을 사용하시려면 체크하신 후, 아래
+                개인정보수집동의문을 작성하십시오.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>개인정보수집 동의문 </span>
+                <br />
+                <button>예시문보기</button>
+              </td>
+              <td style="border-bottom: 0px">
+                <textarea cols="100" rows="10"></textarea>
+              </td>
+            </tr>
+            <tr class="line txt2">
+              <td style="border-top: 0px">
+                * 한글기준 4000자 이내로 작성하셔야 합니다. <br />
+                * 동의문 하단에 자동으로 "설문조사에 응할 경우 개인정보 활용에
+                동의하는 것으로 간주됩니다"라는 문구가 추가됩니다.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>익명 설문 구분 </span>
+              </td>
+              <td style="border-bottom: 0px">
+                <select name="설문유형">
+                  <option value="익명">익명설문</option>
+                  <option value="실명">실명설문</option>
+                </select>
+              </td>
+            </tr>
+            <tr class="line txt2">
+              <td style="border-top: 0px">
+                * 익명 설문을 사용하시면, 참여자의 정보가 공개(표시)되지
+                않습니다.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>설문 대상자(내부) </span>
+              </td>
+            </tr>
+            <tr class="line txt2">
+              <td style="border-top: 0px">
+                내부대상자는 기본정보 등록 후 "내부대상자" 탭에서 등록하여
+                주십시오.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>설문 대상자(외부) </span>
+              </td>
+            </tr>
+            <tr class="line txt2">
+              <td style="border-top: 0px">
+                내부대상자는 기본정보 등록 후 "외부대상자" 탭에서 등록하여
+                주십시오.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>설문 배포허용 여부 </span>
+              </td>
+              <td style="border-bottom: 0px">
+                <input type="checkbox" id="checkbox" />
+                <label for=""> 사용 </label>
+              </td>
+            </tr>
+            <tr class="line txt2">
+              <td style="border-top: 0px">
+                * 설문조사 URL을 외부에 배포하실 경우 체크하십시오. (관리자가
+                등록한 기본결재라인이 적용됩니다.)
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>분석정보 수집 여부 </span>
+              </td>
+              <td style="border-bottom: 0px">
+                <input type="checkbox" id="checkbox" />
+                <label for=""> 사용 </label>
+              </td>
+            </tr>
+            <tr class="line txt2">
+              <td style="border-top: 0px">
+                * 응답결과에 대한 분석자료(지역별, 연령별, 성별, 업종별)를
+                원하시면 체크하십시오.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>설문결과 공개 여부 </span>
+              </td>
+              <td style="border-bottom: 0px">
+                <input type="checkbox" id="checkbox" />
+                <label for=""> 공개 </label>
+              </td>
+            </tr>
+            <tr class="line txt2">
+              <td style="border-top: 0px">
+                * 체크 해제시 설문결과는 설문작성자만 볼 수 있습니다.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>설문조사 URL </span>
+              </td>
+              <td style="border-bottom: 0px">
+                <input type="url" id="url" name="url" />
+              </td>
+            </tr>
+            <tr class="line txt2">
+              <td style="border-top: 0px">
+                * 기본정보를 저장하신 후 설문조사 URL이 생성됩니다.
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="bac txt">
+                <span class="col">*</span>
+                <span>설문조사 수신거부 URL </span>
+              </td>
+              <td style="border-bottom: 0px">
+                <input type="url" id="url" name="url" />
+              </td>
+            </tr>
+            <tr class="line txt2">
+              <td style="border-top: 0px">
+                * 기본정보를 저장하신 후 수신거부 URL이 생성됩니다.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="height: 50px">
+        <button style="margin: auto">등록하기</button>
+      </div>
+    </div>
+  </body>
+</html>

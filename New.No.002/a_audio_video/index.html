@@ -1,0 +1,66 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://www.naver.com">
+      <div>네이버</div>
+    </a>
+    <!-- a 태그는 뭐냐? 링크다.
+        대부분 style을 사용하지 않는다.(지원은 됨)
+        자식으로 스타일을 설정한다
+        href 속성은 이동할 주소다. (하이퍼링크)
+        href는 기본적으로 현재 주소를 기준으로 한다. << 서버 들어가면 더 정확하고 
+        자세하게 다루게 될 것이다.
+        다른 웹페이지로 이동하고 싶으면 주소 삽입하면 된다.
+    -->
+    <a href="https://www.youtube.com/premium" target="_blank"> 유튜브 </a>
+    <!-- 
+        target 속성은 웹페이지를 어떻게 이동할 것인가 
+        _blank 값을 설정하면 새탭으로 이동한다.
+        (공식페이지, 이력서 페이지 등 새창 띄울때 많이 사용)
+    -->
+    <video src="128504.mp4" controls autoplay loop muted></video>
+    <!-- 
+        video태그는 영상을 출력하기 사용한다. 속성은 video
+        src에 주소를 입력한다. << 주소라고 한 이유는 후에 서버 나갈때 다시 말한다.
+        현재 : 파일명을 입력한다(폴더 경로와 파일명을 입력한다.)
+        controls 속성은 영상의 컨트롤 박스를 출력시켜준다.
+        autoplay 속성은 영상이 로드가 완료되면 바로 재생한다.
+        autoplay의 단점이 있습니다.
+        웹페이지를 들어갔을 때 오디오가 바로 나오면 안되는 게 권장사항이다.
+        >> IOS가 이걸 정말 빡세게 따지기 떄문에 자동 재생이 안된다. 
+        loop 속성은 말 그대로 반복이다.
+        muted 속성은 이름 그대로 음소거다. << IOS에서 중요.       
+     -->
+    <!-- <video src="https://www.youtube.com/watch?v=QprjHeuDeUA" controls></video> -->
+    <iframe
+      width="836"
+      height="470"
+      src="https://www.youtube.com/embed/eyDsdNorMb4"
+      title="[이상한변호사우영우 | #메이킹 #고래통신EP8] 가지마 가지말란말이야😭 흑흑😭 마지막인만큼 10분 길이의 은혜로운 메이킹🌟 배우들의 끈끈한 정이 느껴지시나요?"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <!-- youtube는 속성코드 복사를 해야 한다. 
+    title 속성 내부에 " "**" " 사용 시 >> ' "***" ' 로 해결하면 된다.
+    -->
+    <audio src="own-117683.mp3" controls></audio>
+    <!-- audio 태그는 음악을 재생하는 태그이다. 속성은 audio
+    controls 없이 autoplay만 속성 사용 시 재생 버튼 없이 배경음악처럼 자동재생된다.
+    태그의 속성은 이름만 넣을 경우 값을 true로 자동한다. ('controls' ='controls="true"')
+    >> 참거짓(true/false)의 값을 갖는 속성은 이름만으로 처리가 가능하다.
+    이름만 넣을 수 있는 속성들은 기본값이 거짓(false)이다.
+    >> 기본값이라는 건 설정 자체를 안했을 때 (속성의 이름 자체도 아예 안넣었을 때)
+    <audio src="own-117683.mp3"></audio>
+    >> controls, autoplay,... 등의 속성을 아예 안넣은 상태, 설정을 안했다. 그래서 기본값이다.
+    <audio src="own-117683.mp3" controls></audio>
+    >> controls 속성을 설정하겠다. 그런데 값은 알아서 넣어라.
+    속성값만으로 참이 되는 값
+    -->
+  </body>
+</html>

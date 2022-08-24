@@ -1,0 +1,187 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <form action="#" method="get">
+      <!-- 사용자가 입력하는 데이터를 서버에 보내는 태그
+            자세하게는 Javascript
+            지금은 모양과 입력만!
+            POST, GET..., 서버 들어가서 할 예정,
+            table, ol, ul 처럼 form 부모로써 사용한다.
+            action 속성은 어디에다가 보낼지 서버의 주소를 입력한다. 
+            # 은 권장사항, W3C에서 주소가 없을 때 넣도록 권장한다.
+            ( 'a' 도 주소가 없을 경우 사용)
+            method 속성은 데이터를 어떤 방식으로 보낼건지 설정한다.
+            >> 위에서 언급한 GET, POST 정도
+            GET은 주소의 입력 데이터가 나온다
+            target << a 와 속성 사용은 같다                   
+        -->
+      <fieldset>
+        <!-- 
+                사용하고 싶으면 사용할 것
+                fieldset 태그는 form 안에 영역을 구분해준다.
+                div 사용해도 됨
+                style이 기본값으로 있어서 적용하기만 해도 눈에 보인다. (선이 눈에 보인다)
+             -->
+        <legend>fieldset의 제목</legend>
+
+        <input type="text" placeholder="미입력시 출력되는 텍스트" autofocus />
+        <!-- 입력시 placeholder 값이 사라짐 -->
+        <!-- 'autofocus' 속성은 페이지 진입 시 바로 입력할 수 있도록 커서가 자동 생성된다-->
+
+        <input type="text" id="text" name="ersar" />
+        <!-- 
+            input 태그는 이름 그대로 사용자가 데이터를 입력하는 영역
+            type이 너무 많음
+            text 값은 (자동 완성 입력 값) 글을 적을 수 있는 것
+            name 속성은 서버에 보낼 때 어떤 이름을 갖고 있는지, 데이터에 대한 이름을 갖는다
+            id 속성은 label 태그와 연결하기 위해 사용한다.
+         -->
+        <label for="text">아무거나 입력하기</label>
+        <!-- 
+            label 태그는 입력 값에 대한 제목을 사용자에게 보여준다.
+            ex) 성명, 이름, 번호, 메일 등등
+            for 속성은 input 태그와 연결하기 위해 사용한다.
+            클릭 시 연결된 input에 입력할 수 있도록 해준다. (focus)
+          -->
+        <label for="pw">
+          비밀번호 : <input type="password" name="pw" id="pw" />
+        </label>
+        <!-- 
+            type 속성이 password 값을 가지는 input 태그는 타입 그대로 비밀번호를 입력할 수 있게 해준다
+            입력된 데이터를 알아서 가려준다.
+         -->
+        <label for="tel">
+          전화번호 : <input type="tel" name="tel" id="tel" />
+        </label>
+        <!-- 
+            필터링 안돼서 Javascript로 필터링 필요
+         -->
+        <div>
+          <label for="number">나이 : </label>
+          <input type="number" id="number" name="age" />
+        </div>
+        <div>
+          <label for="url"> 주소를 입력해주세요 </label>
+          <input type="url" id="url" name="url" />
+        </div>
+        <div>
+          <label for="search"> 검색어를 입력해주세요 </label>
+          <input type="search" id="search" />
+        </div>
+        <div>
+          <label for="email"> 이메일을 입력해주세요 </label>
+          <input type="email" id="email" />
+          <!-- 
+            'email' 은 필터링이 잘 되어있음, 제대로 작성하지 않으면 받아주지 않음
+            ex) kkkkkk (x) kkkkkk@naver.com (O)
+           -->
+        </div>
+        <div>
+          <label for=""> 동의 </label>
+          <input type="checkbox" id="checkbox" checked />
+          <!-- 
+            'checkbox' 는 체크 사각 박스
+            'checked' 속성을 설정하면 체크된 상태로 결과값이 나온다
+           -->
+        </div>
+        <div>
+          좋아하는 과일은
+          <input type="radio" id="radio1" name="radio" />
+          <label for="radio1">사과</label>
+          <input type="radio" id="radio2" name="radio" />
+          <label for="radio2">오렌지</label>
+          <input type="radio" id="radio3" name="radio" />
+          <label for="radio3">포도</label>
+          <input type="radio" id="radio4" name="radio1" />
+          <label for="radio4">중복되는 과일</label>
+          <!-- 
+            하나만 선택하는 여러 개의 체크박스
+            중복을 체크할 경우 'name' 을 사용한다
+           -->
+        </div>
+        <div>
+          <input type="text" id="test1" />
+          <!-- 
+            'label'의 'for' 속성과 'input'의 'id' 속성이 같은 값을 가지면
+            위치와 상관없이 'label' 클릭 시 'input'에 입력할 수 있도록 커서가 이동된다.
+           -->
+        </div>
+        <input type="file" />
+        <input
+          type="image"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQUFbCyOGDWzz4ACM4j459uy5feullW5No0fRWY2AutadOvYVoXMp1IOHcguGmB6OAdfA&usqp=CAU"
+        />
+        <!-- 
+            버튼을 이미지로 출력할 경우 사용
+            이미지를 넣어서 버튼을 대체함
+         -->
+        <button>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQUFbCyOGDWzz4ACM4j459uy5feullW5No0fRWY2AutadOvYVoXMp1IOHcguGmB6OAdfA&usqp=CAU"
+            alt=""
+          />
+        </button>
+        <div>
+          <label for="birthday">생일 : </label>
+          <input type="date" id="birthday" />
+        </div>
+        <div>
+          <input type="color" />
+          <!-- 컬러 선택 버튼 'color' -->
+        </div>
+        <button type="reset">
+          입력값 초기화
+          <!-- 초기화 버튼 'reset' -->
+        </button>
+
+        <textarea cols="30" rows="10"></textarea>
+        <!-- 
+            'textarea' 는 여러 줄을 입력 가능한 'input text' 이다
+            사용자가 편의에 따라 영역 조절을 할 수 있다.
+         -->
+        <div>
+          <select name="area">
+            <option value="s">서울</option>
+            <option value="45">경기도</option>
+            <option value="43">인천</option>
+            <option value="234">강원도</option>
+            <!-- 
+                'select name="area"' 는 option의 데이터를 지정해준 것
+                'option' 은 선택할 메뉴들, 'value'가 중요!
+                'value' 는 보낼 데이터이다. (ex) 서울이 s 이다 라는 데이터)
+                'option' 은 무조건 'select'의 자식으로 들어가야 한다.
+
+                ex) 서버한테 정보를 줄 경우, 개인정보
+                id - asdf
+                비번 - *****
+                이름 - 홍길동
+                직업 - 교수
+                왼쪽이 name, 오른쪽이 value
+             -->
+          </select>
+        </div>
+        <!-- <div style="cursor: pointer" onclick="">보내기</div> -->
+        <button type="submit">
+          <!-- 
+                누르는 것, 이름 그대로 버튼
+                'a' 는 다른 웹페이지로 이동만할 경우 사용하고,
+                'button' 은 모든 경우에 사용함
+                기본적으로 작동하는 게 없어서 Javascript를 넣어야 하지만
+                'a' 처럼 무조건 작동하는 게 없어서 편함
+                'type'은 어떠한 작동을 할 것인지 기본 작동을 설정함
+                'submit'은 'form'데이터를 보낼 때 사용함
+             -->
+          보내기
+        </button>
+      </fieldset>
+    </form>
+    <div>
+      <label for="test1">클릭 테스트</label>
+    </div>
+  </body>
+</html>
