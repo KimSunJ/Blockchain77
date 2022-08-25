@@ -1,0 +1,30 @@
+.border {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 10px;
+  /* 
+  외곽선의 모서리를 깎는다.
+  반지름 값을 입력한다.
+  */
+  /* 원 그릴 경우 100%로 설정하면 그려짐 */
+
+  border: 1px solid black;
+  /* 
+  정말 자주 사용하는 속성
+  외곽선을 한줄로 그린다.
+  */
+
+  border: 10px dashed red;
+  /* 외곽선을 점선으로 그린다. */
+
+  border: 10px double blue;
+  /* 외곽선을 두줄로 그린다. */
+  border: 10px dotted yellow;
+  /* 외곽선을 점으로 찍는다. */
+  border: none;
+  /* 외곽선 삭제 */
+
+  border-width: 10px;
+  border-color: brown;
+}
