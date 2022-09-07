@@ -36,7 +36,7 @@ for (let i = 1; i <= playerSel; ++i) {
 // 컴퓨터가 선택한 랜덤 수와 마찬가지로 중복되면 안되기 때문에 playerSel 배열에 숫자가 없는지 확인 후 추가한다.
 
 // const claparr = [3, 6, 9];
-// const clapNum = claparr.find((maxNum) => "짝");
+// const clapNum = `${i}`.split('').find((maxNum) => "짝");
 // console.log(clapNum);
 
 // tempReturn = arr.find(function (item) {
@@ -46,7 +46,7 @@ for (let i = 1; i <= playerSel; ++i) {
 // if (maxNum.includes(clapNum)) {
 // console.log("제발 짝!!!!!!");
 // }
-// if (playerSel.includes(parseInt(clapNum))) {
+// if (!playerSel.includes(parseInt(clapNum))) {
 // const clapNum = parseInt[("3", "6", "9")];
 // console.log((clapNum = "짝"));
 // }
