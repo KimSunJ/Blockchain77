@@ -1,0 +1,32 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linked List</title>
+  </head>
+  <body>
+    <script>
+      const listNode = {
+        data: undefined,
+        // 노드의 데이터
+        next: undefined,
+        // 다음 노드
+        insert(data) {
+          // 노드 추가
+          if (this.next) this.next.insert(data);
+          // 다음 노드가 있으면 그 노드에 추가
+          this.next = {
+            // 다음 노드가 없으면 여기에 추가
+            ...listNode,
+            data,
+          };
+        },
+      };
+      const listRoot = { ...listNode, data: 1 };
+      listRoot.insert(2);
+      listRoot.insert(3);
+      console.log(listRoot);
+    </script>
+  </body>
+</html>

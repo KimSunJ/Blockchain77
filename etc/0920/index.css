@@ -1,0 +1,307 @@
+.top-back {
+  background-image: url("Mario-Block.png");
+  width: 540px;
+  height: 40px;
+  background-size: 130px 40px;
+  margin: auto;
+}
+
+.machine {
+  width: 500px;
+  background-color: rgba(0, 106, 255);
+  min-width: 500px;
+  margin: auto;
+  position: relative;
+  padding: 20px;
+}
+
+.money {
+  display: flex;
+  width: 500px;
+  height: 70px;
+  background-color: black;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  color: white;
+  /* text-align: center; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mon-img {
+  margin: 15px;
+}
+
+.money > p {
+  font-size: 25px;
+}
+
+.results-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 310px;
+  position: relative;
+}
+
+.result-box {
+  display: flex;
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-box.top {
+  background-color: red;
+  color: white;
+}
+
+.result-box.bottom {
+  background-color: yellow;
+  color: red;
+}
+.result-box.bottom:first-child {
+  text-shadow: none;
+}
+
+.wink span {
+  justify-content: center;
+  align-items: center;
+}
+
+.coinslot {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  height: 300px;
+  margin-left: 50px;
+  justify-content: center;
+}
+
+.coin {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("Mario-Block.png");
+  background-size: 130px 40px;
+  background-color: white;
+  display: flex;
+  width: 130px;
+  height: 40px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.center {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wink {
+  text-align: center;
+  margin-left: 160px;
+}
+
+.hands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 310px;
+  height: 300px;
+  /* border-radius: 100%; */
+  background-color: black;
+  /* position: absolute; */
+  /* margin: 90px 0px; */
+}
+
+.hand1 {
+  display: flex;
+  position: relative;
+}
+
+.hand2 {
+  display: flex;
+  position: absolute;
+}
+
+.hand3 {
+  display: flex;
+  position: absolute;
+}
+
+.pla {
+  display: flex;
+}
+
+.player,
+.st {
+  margin-top: 10px;
+  display: flex;
+}
+
+.btn1,
+.btn2,
+.btn3,
+.btn4,
+.btn5 {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  /* box-shadow: 1px 0px 0px #1976d2; */
+}
+
+.btn1 img,
+.btn2 img,
+.btn3 img {
+  pointer-events: none;
+}
+
+.btn4,
+.btn5 {
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+}
+
+tr,
+th {
+  position: absolute;
+}
+
+.cointable {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  background-color: rgb(55, 121, 55);
+  height: 40px;
+  font-size: 20px;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding-left: 0px;
+  /* border: 1px solid black; */
+}
+
+.turtle {
+  display: flex;
+  width: 100px;
+  height: 100px;
+}
+
+.coint li {
+  display: flex;
+  background-color: yellowgreen;
+  border: 1px solid black;
+  align-items: center;
+  padding: 7px;
+  /* height: 38px; */
+}
+
+.mario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes trans-img {
+  /* 0% { */
+  /* background-image: url(./hand_1.png); */
+  /* } */
+  /* 32.9% { */
+  /* background-image: url(./hand_1.png); */
+  /* } */
+  /* 33% { */
+  /* background-image: url(./hand_2.png); */
+  /* } */
+  /* 66.9% { */
+  /* background-image: url(./hand_2.png); */
+  /* } */
+  /* 67% { */
+  /* background-image: url(./hand_3.png); */
+  /* } */
+  /* 100% { */
+  /* background-image: url(./hand_3.png); */
+  /* } */
+  from {
+    background-image: url(./hand_2.png);
+  }
+  24.9% {
+    background-image: url(./hand_2.png);
+  }
+  25% {
+    background-image: url(./hand_1.png);
+  }
+  66.9% {
+    background-image: url(./hand_1.png);
+  }
+  70% {
+    background-image: url(./hand_3.png);
+  }
+  to {
+    background-image: url(./hand_3.png);
+  }
+}
+
+.hands {
+  animation-name: trans-img;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10px 0;
+}
+
+@keyframes moving-mario {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.turtle {
+  display: flex;
+  width: 400px;
+  height: 100px;
+  /* animation-name: moving-mario */
+  animation-name: moving-mario;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+@keyframes get-mario {
+  from {
+    transform: translateY(-30%);
+  }
+  to {
+    transform: translateY(5%);
+  }
+}
+
+.slot-img {
+  width: 60px;
+  animation: "";
+  animation-direction: alternate;
+}

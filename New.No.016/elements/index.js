@@ -81,28 +81,28 @@ function onClick(num) {
   };
 });
 
-const tempArr = ["a", "b", "c"];
+// const tempArr = ["a", "b", "c"];
 
 // forEach
-tempArr.forEach((item, index) => {
-  console.log(item + " : " + index + "번째 아이템");
-  // forEach의 단점: 멈출수 없다. (break가 먹히지 않음)
-});
+// tempArr.forEach((item, index) => {
+// console.log(item + " : " + index + "번째 아이템");
+// forEach의 단점: 멈출수 없다. (break가 먹히지 않음)
+// });
 
 // forEach 결과
 // a : 0번째 아이템
 // b : 1번째 아이템
 // c : 2번째 아이템
 
-for (let index = 0; index < tempArr.length; ++index) {
-  const item = tempArr[index];
-  // forEach에서 사용하는 item이랑 변수 통일하기 위해서 초기화
-  console.log(item + " : " + index + "번째 아이템");
-}
+// for (let index = 0; index < tempArr.length; ++index) {
+// const item = tempArr[index];
+// forEach에서 사용하는 item이랑 변수 통일하기 위해서 초기화
+// console.log(item + " : " + index + "번째 아이템");
+// }
 
-console.log(document.getElementById("parent").innerHTML);
+// console.log(document.getElementById("parent").innerHTML);
 // html 기준으로 텍스트를 가져온다.
-console.log(document.getElementById("parent").innerText);
+// console.log(document.getElementById("parent").innerText);
 // html 태그 등등을 제외한 텍스트만 가져온다.
 
 document.getElementById("btn").onclick = () => {

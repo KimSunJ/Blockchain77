@@ -11,7 +11,7 @@ console.log(cards);
 
 let firstCardIdx = -1;
 let secondCardIdx = -1;
-function selectNum(cardNum) {
+function playNum(cardNum) {
   console.log("firstCardIdx :" + firstCardIdx);
   console.log("secondCardIdx :" + secondCardIdx);
   const tempElem = document.getElementById("card" + cardNum);
@@ -52,16 +52,4 @@ function selectNum(cardNum) {
     secondCardIdx = cardNum;
     tempElem.innerHTML = cards[cardNum];
   }
-  //    else if (cards[firstCardIdx] != cards[secondCardIdx]) {
-  //     firstElem.innerHTML = "";
-  //     secondElem.innerHTML = "";
-  //     firstCardIdx = -1;
-  //     secondCardIdx = -1;
-  //     // 카드가 일치하지 않기 떄문에 다시 정의해준다.
-  //   } else{
-  //     firstCardIdx = -1;
-  //     secondCardIdx = -1;
-  //   }
-  // 카드가 일치할 경우 그대로 두어라
-  // 찾은 클릭 당한 태그에 내용으로 cards(랜덤으로 배치한 카드들) 중에 cardNum - 1번째 (컴퓨터는 숫자를 0부터 시작하기 때문)를 찾아 출력하도록 한다.
 }
