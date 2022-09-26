@@ -1,0 +1,28 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class && prototype</title>
+  </head>
+  <body>
+    <script>
+      function ClassTest1(data) {
+        this.a = 1;
+        this.b = data;
+      }
+      const tempTest1 = new ClassTest1(3);
+      class ClassTest2 {
+        constructor(data) {
+          this.a = 1;
+          this.b = data;
+        }
+      }
+      const tempTest2 = new ClassTest2(3);
+      tempTest1.a = tempTest2.b = 4;
+      console.log(tempTest1);
+      console.log(tempTest2);
+      //  ClassTest1은 function을 사용한것이고 ClassTest2는 class를 사용한 것이다. (똑같다)
+    </script>
+  </body>
+</html>
