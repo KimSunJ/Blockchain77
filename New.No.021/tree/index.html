@@ -68,26 +68,69 @@
             } else return;
           }
         }
-        remove(data = 1229, node = this.root) {
-          //   if (!node) return;
-          if (!node.left) {
-            node.left = node.right;
+        remove(data, node = this.root) {
+          if (!this.root) return;
+          if (!node.data > data) {
+            // 지우려는 데이터가 현재 노드의 데이터보다 작다
+            if (node.left) {
+              // 현재 노드의 왼쪽 노드가 있으면
+              node.left = this.remove(data, node.left);
+              // node.right = this.remove(data, node.right);
+            }
+          } else if (node.data < data) {
+            // 지우려는 데이터가 현재 노드의 데이터보다 크다.
+            if (node.right) {
+              node.right = this.remove(data, node.right);
+            }
+          } else {
+            // 정답
+            if (!node.left && !node.right) {
+              if (node === this.root) this.root = undefined;
+              // 두 노드가 없고, 루트만 남았을 경우 루트를 지워야하기 때문에
+              return undefined;
+            } else if (!node.left) {
+              // 왼쪽 노드가 없다 => 오른쪽 노드는 있다.
+              if (node === this.root) this.root = node.right;
+              return node.right;
+            } else if (!node.right) {
+              // 오른쪽 노드가 없다 => 왼쪽 노드는 있다.
+              if (node === this.root) this.root = node.left;
+              return node.left;
+            } else {
+              let tempNode = node.right;
+              while (tempNode.left) {
+                tempNode = tempNode.left;
+              }
+              node.data = tempNode.data;
+              node.right = this.remove(tempNode.data, node.right);
+            }
+            // return undefined;
+            // 임시코드
           }
-          //   conaole.log(data);
-          console.log(node);
+          return node;
+          // 리턴을 하지 않으면 바로 왼쪽 노드가 undefined로 뜬다.
+          // 왼쪽 가장 작은 숫자 1을 지우려면 재귀함수로 하기 위해 return을 한다.
+          // 마지막에 현재 노드를 반환해준다.
+          // 재귀 함수를 위해서
         }
       }
       const testSearch = new BinarySearchTree();
-      testSearch.insert(227);
-      testSearch.insert(777);
-      testSearch.insert(727);
-      testSearch.insert(141);
-      testSearch.insert(1229);
-      testSearch.insert(18);
-      testSearch.insert(666);
+      testSearch.insert(8);
+      testSearch.insert(4);
+      testSearch.insert(12);
+      testSearch.insert(2);
+      testSearch.insert(6);
+      testSearch.insert(10);
+      testSearch.insert(14);
+      testSearch.remove(1);
+      testSearch.insert(3);
+      testSearch.insert(5);
+      testSearch.insert(9);
+      testSearch.insert(11);
+      testSearch.insert(13);
+      testSearch.insert(15);
       testSearch.remove(1);
       console.log(testSearch);
-      // 랜덤 수가 들어있으면 찾기가 쉽다.
     </script>
   </body>
 </html>
