@@ -1,0 +1,40 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selectSort</title>
+    <!-- 최소값만 앞으로 배열되고, 최소값이 있던 자리만 바뀐다. 최소값이 있는지 확인하기 위해서 끝까지 돈다.-->
+  </head>
+  <body>
+    <script>
+      function swap(arr, idx1, idx2) {
+        const temp = arr[idx1];
+        arr[idx1] = arr[idx2];
+        arr[idx2] = temp;
+      }
+
+      const dataArr = [
+        727, 129, 621, 333, 100, 708, 1112, 1121, 1229, 214, 1818, 500, 6, 8282,
+        119, 3838,
+      ];
+
+      function selectSort(arr) {
+        const tempArr = [...arr];
+        for (let i = 0; i < tempArr.length - 1; i++) {
+          let min = i;
+          for (let j = i + 1; j < tempArr.length; j++) {
+            if (tempArr[min] > tempArr[j]) min = j;
+          }
+          swap(tempArr, minIdx, i);
+          // 최소값이 위치하는 인덱스를 저장해야하기 때문에
+        }
+        return tempArr;
+      }
+      console.log(dataArr);
+      console.time("selectSort");
+      console.log(selectSort(dataArr));
+      console.timeEnd("selectSort");
+    </script>
+  </body>
+</html>
