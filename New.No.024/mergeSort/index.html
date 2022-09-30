@@ -1,0 +1,41 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>병합 정렬</title>
+    <!-- 정렬 사이사이 나눈 뒤 합치면서 비교후 순서대로 정렬한다. -->
+  </head>
+  <body>
+    <script>
+      let count = 0;
+      function merge(leftArr, rightArr) {
+        // 합치는 함수
+        count--;
+        console.log("merge count : " + count, [leftArr, ...rightArr]);
+        return [...leftArr, ...rightArr];
+      }
+
+      function mergeSort(arr) {
+        // 분리하는 함수
+        console.log("seperate count : " + count, arr);
+        if (arr.length === 1) return arr;
+        const midPoint = parseInt(arr.length / 2);
+        count++;
+        return merge(
+          mergeSort(arr.slice(0, midPoint)),
+          // 정렬의 중간을 분리한다
+          mergeSort(arr.slice(midPoint))
+          // 분리 기준으로 정렬을 분리한다
+        );
+      }
+
+      const dataArr = [
+        727, 129, 621, 333, 100, 708, 1112, 1121, 1229, 214, 1818, 500, 6, 8282,
+        119, 3838,
+      ];
+
+      console.log(mergeSort(dataArr));
+    </script>
+  </body>
+</html>

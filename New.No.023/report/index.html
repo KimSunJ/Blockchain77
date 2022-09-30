@@ -21,7 +21,26 @@
       console.log(solution(4));
       console.log(solution(5));
       console.log(solution(6));
-      console.log(solution(50));
+
+      function solution(n) {
+        let answer = 0;
+        if (n < 2) {
+          return n;
+        }
+        // for (let i = 0; i <= n + 3; ++i) {
+        answer = solution(n - 1) + solution(n - 2);
+        // }
+        return answer;
+      }
+      console.log("재귀 " + solution(1));
+      console.log("재귀 " + solution(2));
+      console.log("재귀 " + solution(3));
+      console.log("재귀 " + solution(4));
+      console.log("재귀 " + solution(5));
+      console.log("재귀 " + solution(6));
+      console.log("재귀 " + solution(7));
+      console.log("재귀 " + solution(8));
+      console.log("재귀 " + solution(19));
     </script>
   </body>
 </html>
