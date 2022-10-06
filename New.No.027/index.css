@@ -1,0 +1,193 @@
+body {
+  margin: 0px;
+}
+
+.top {
+  display: flex;
+  background-color: #f6f5ef;
+  box-sizing: border-box;
+  width: 100%;
+  height: 122px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 3;
+}
+
+.card-event {
+  display: flex;
+  flex-wrap: wrap;
+  width: 140px;
+  /* margin: 30 1700px; */
+  position: fixed;
+  top: 22%;
+  left: 78%;
+  z-index: 3;
+}
+
+.card-event img {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.sign-bar ul {
+  margin-left: 400px;
+}
+
+.sign-bar ul li {
+  font-size: 14px;
+  height: 16px;
+  border-left: 1px solid lightgrey;
+}
+
+.sign-bar ul li:first-child {
+  border-left: none;
+}
+
+a {
+  text-decoration: none;
+  margin: 10px;
+  color: black;
+}
+
+.sign-bar,
+.search {
+  display: flex;
+  position: absolute;
+}
+
+.search img {
+  width: 23px;
+  height: 23px;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.search input {
+  margin: 0%;
+}
+
+.nav-main ul li a {
+  display: flex;
+  /* justify-content: space-between; */
+  /* position: relative; */
+  margin: 100px;
+}
+
+/* 메인 슬라이드 */
+.first-slide {
+  /* position: absolute; */
+  background-image: url("2022Autumn_main_bg_02.jpg");
+  background-size: 100% 648px;
+  width: 100%;
+  height: 647px;
+  margin-top: 120px;
+}
+
+.title,
+.title-detail {
+  display: flex;
+  flex-wrap: wrap;
+  width: 333px;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 0%;
+  margin: 0%;
+}
+
+.title-txt {
+  position: absolute;
+  background-image: url("2022_Autumn_main_title.png");
+  background-size: 333px 168px;
+  width: 333px;
+  height: 168px;
+  margin: 120 250 60px;
+  margin-right: 0px;
+  /* top: 200px; */
+}
+
+.title-detail a {
+  /* width: 400px; */
+  /* height: 500px; */
+  font-size: 14px;
+  border: 2px solid black;
+  border-radius: 7px;
+  padding: 8 25px;
+  margin-top: 100px;
+}
+
+.drink1 {
+  position: absolute;
+  background-image: url("2022_Autumn_main_drink_03.png");
+  background-size: 275px 438px;
+  width: 275px;
+  height: 438px;
+  margin: 60 0 0 1190px;
+}
+
+.drink2 {
+  position: absolute;
+  background-image: url("2022_Autumn_main_drink_01.png");
+  background-size: 275px 412px;
+  width: 275px;
+  height: 412px;
+  margin: 190 0 0 930px;
+}
+
+.drink3 {
+  position: absolute;
+  background-image: url("2022_Autumn_main_drink_02.png");
+  background-size: 272px 446px;
+  width: 272px;
+  height: 446px;
+  margin: 70 0 0 650px;
+}
+
+/* 중간 슬라이드(black&white) */
+.promotion-nav {
+  width: 100%;
+  /* background-color: black; */
+  /* color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promotion-nav > span {
+  width: 50%;
+  height: 63px;
+  background-color: black;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promotion-nav > span:nth-child(2) {
+  width: 50%;
+  height: 63px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rewards {
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  background-color: #1e3932;
+}
+
+.rewards img {
+  width: 100px;
+}
