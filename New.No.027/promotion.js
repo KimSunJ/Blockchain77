@@ -18,6 +18,7 @@ up.addEventListener("click", () => {
 // 프로모션 이미지 슬라이딩 버튼
 let click = 0;
 let pause = document.getElementById("pause");
+let play = document.getElementById("play");
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
 let btn3 = document.getElementById("btn3");
@@ -72,11 +73,11 @@ nextBtn.addEventListener("click", function () {
 prevBtn.addEventListener("click", function () {
   moveSlide(currentIdx - 1);
 });
-
+// 이미지 슬라이드
 function moveSlide(num) {
   slides.style.left = -num * (slideWidth + slideMargin) + "px";
   currentIdx = num;
-  console.log(currentIdx, slideCount);
+  // console.log(currentIdx, slideCount);
   if (currentIdx == 0 || currentIdx == 3 || currentIdx == -3) {
     btn1.style.backgroundImage = "url('main_prom_on.png')";
     btn2.style.backgroundImage = "url('main_prom_off.png')";
@@ -90,8 +91,8 @@ function moveSlide(num) {
     btn1.style.backgroundImage = "url('main_prom_off.png')";
     btn2.style.backgroundImage = "url('main_prom_off.png')";
   }
-  console.log(btn1, btn2, btn3);
-  console.log(currentIdx);
+  // console.log(btn1, btn2, btn3);
+  // console.log(currentIdx);
   if (currentIdx == slideCount || currentIdx == -slideCount) {
     setTimeout(function () {
       slides.classList.remove("transition");
@@ -106,12 +107,15 @@ function moveSlide(num) {
 
 let slideImg = 0;
 
-slideImg = setInterval(function () {
+slideImg = setInterval(reset, 3000);
+
+function reset() {
   moveSlide(currentIdx + 1);
-}, 3000);
+}
 
 btn1.addEventListener("click", () => {
-  pause.style.backgroundImage = "url('main_prom_play.png')";
+  pause.style.display = "url('main_prom_play.png')";
+  // play.classList.add("active");
   btn1.style.backgroundImage = "url('main_prom_on.png')";
   btn2.style.backgroundImage = "url('main_prom_off.png')";
   btn3.style.backgroundImage = "url('main_prom_off.png')";
@@ -120,7 +124,7 @@ btn1.addEventListener("click", () => {
 });
 
 btn2.addEventListener("click", () => {
-  pause.style.backgroundImage = "url('main_prom_play.png')";
+  pause.style.display = "url('main_prom_play.png')";
   btn1.style.backgroundImage = "url('main_prom_off.png')";
   btn2.style.backgroundImage = "url('main_prom_on.png')";
   btn3.style.backgroundImage = "url('main_prom_off.png')";
@@ -129,7 +133,7 @@ btn2.addEventListener("click", () => {
 });
 
 btn3.addEventListener("click", () => {
-  pause.style.backgroundImage = "url('main_prom_play.png')";
+  pause.style.display = "url('main_prom_play.png')";
   btn1.style.backgroundImage = "url('main_prom_off.png')";
   btn2.style.backgroundImage = "url('main_prom_off.png')";
   btn3.style.backgroundImage = "url('main_prom_on.png')";
@@ -137,4 +141,16 @@ btn3.addEventListener("click", () => {
   clearInterval(slideImg);
 });
 
-let play = 0;
+let checkNum = 0;
+
+pause.onclick = () => {
+  checkNum++;
+  if (checkNum % 2 != 0) {
+    pause.style.backgroundImage = "url('main_prom_play.png')";
+    clearInterval(slideImg);
+  } else {
+    pause.style.backgroundImage = "url('main_prom_stop.png')";
+    slideImg = setInterval(reset, 3000);
+    console.log(pause);
+  }
+};

@@ -9,6 +9,7 @@
   </head>
   <body>
     <!-- main nav -->
+
     <header>
       <div class="top">
         <div class="top-inner">
@@ -473,10 +474,23 @@
           </div>
         </div>
         <div class="prom-btn" id="promBtn">
-          <li class="btn-pause" id="pause"></li>
-          <li class="btn2" id="btn1"></li>
-          <li class="btn3" id="btn2"></li>
-          <li class="btn4" id="btn3"></li>
+          <ul>
+            <li
+              class="btn-play"
+              id="play"
+              style="background-image: url('main_prom_play.png')"
+            ></li>
+            <li
+              class="btn-pause"
+              id="pause"
+              style="background-image: url('main_prom_stop.png')"
+            ></li>
+          </ul>
+          <ul>
+            <li class="btn2" id="btn1"></li>
+            <li class="btn3" id="btn2"></li>
+            <li class="btn4" id="btn3"></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -533,15 +547,15 @@
     <!-- pick your favorite -->
     <div class="pick">
       <div class="pick-txt">
-        <img src="fav_prod_txt01.png" alt="" />
-        <h2>다양한 메뉴를&nbsp;<br />스타벅스에서 즐겨보세요.</h2>
-        <p>
+        <img src="fav_prod_txt01.png" alt="" id="pickImg" />
+        <h2 id="pickTxt1">다양한 메뉴를&nbsp;<br />스타벅스에서 즐겨보세요.</h2>
+        <p id="pickTxt2">
           스타벅스만의 특별함을 경험할 수 있는 최상의 선택 음료 <br />
           스타벅스 커피와 완벽한 어울림을 자랑하는 푸드 <br />
           다양한 시도와 디자인으로 가치를 더하는 상품 <br />
           소중한 사람에게 마음을 전하는 가장 좋은 방법 스타벅스 카드
         </p>
-        <a href="#">자세히 보기</a>
+        <a id="pickDetail" href="#">자세히 보기</a>
       </div>
       <div class="pick-img">
         <img src="2022_Autumn_pick.png" alt="" />
@@ -553,28 +567,28 @@
         <img src="reserve_text_pc_220120.png" alt="" />
         <a href="#">자세히 보기</a>
       </div>
-      <img src="reserve_visual_pc_220119.png" alt="" />
+      <img src="reserve_visual_pc_220119.png" alt="" id="magazine" />
     </div>
     <!-- store search -->
     <div class="store">
       <div class="bean-img"></div>
-      <div class="house-img"></div>
-      <div class="circle-img">
+      <div class="house-img" id="house"></div>
+      <div class="circle-img" id="circle">
         <img src="store_exp_img01.png" alt="" />
         <img src="store_exp_img02.png" alt="" />
       </div>
       <div class="store-over">
         <div class="store-search">
-          <h2>스타벅스를 가까이에서 경험해보세요.</h2>
-          <h3>고객님과 가장 가까이에 있는 매장을 찾아보세요!</h3>
-          <p>
+          <h2 id="storeTxt1">스타벅스를 가까이에서 경험해보세요.</h2>
+          <h3 id="storeTxt2">고객님과 가장 가까이에 있는 매장을 찾아보세요!</h3>
+          <p id="storeTxt3">
             차별화된 커피 경험을 누릴 수 있는 <b> 리저브&trade; 매장</b>
             <br />다양한 방법으로 편리하게 즐길 수 있는
             <b> 드라이브 스루 매장 </b> <br />함께해서 더 따뜻할 수 있는
             지역사회 소통 공간
             <b> 커뮤니티 매장</b>
           </p>
-          <a href="#">매장 찾기</a>
+          <a href="#" id="storeDetail">매장 찾기</a>
         </div>
       </div>
     </div>
@@ -654,6 +668,7 @@
         <p>&#169; 2022 Starbucks Coffee Company. All Rights Reserved.</p>
       </div>
     </footer>
+
     <script src="promotion.js"></script>
     <script src="index.js"></script>
     <!-- <script
