@@ -46,3 +46,12 @@ window.onscroll = function (event) {
     circle.classList.add("active");
   }
 };
+
+app.get("/", (req, res) => {
+  console.log(req);
+  res.send(html);
+});
+
+app.listen(5080, () => {
+  console.log("서버 열음");
+});
