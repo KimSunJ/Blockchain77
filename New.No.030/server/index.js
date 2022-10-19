@@ -14,7 +14,7 @@ const dotenv = require("dotenv");
 // 환경 설정 파일을 로드하기 위한 라이브러리
 const path = require("path");
 // 경로 내장 모듈
-const cookieParser = require("cookie-Parser");
+const cookieParser = require("cookie-parser");
 // 쿠키를 위한 라이브러리 << 세션과 같이 나중에
 
 // console.log(require("./cusMath").sum(1, 2));

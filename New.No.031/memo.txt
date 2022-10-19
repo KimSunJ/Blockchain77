@@ -1,0 +1,5 @@
+개발자 도구 -> Network -> Respose 확인 가능
+http 통신을 하는데, header가 필요하다
+cache, cookie 임시 데이터를 저장 할 것인가 안할 것인가 기재
+content-type: 어떤 형식으로 되어 있는지
+등의 어떤 데이터인지 다 보내줘야한다.

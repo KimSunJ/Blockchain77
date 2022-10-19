@@ -27,5 +27,3 @@ app.listen(8080, () => {
   console.log("서버 열음");
 });
 // 서버 연 상태(npm start;)에서 localhost:8080으로 서버를 연다.
-
-//
