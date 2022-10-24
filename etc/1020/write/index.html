@@ -1,0 +1,27 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h2>자유게시판</h2>
+    <form id="write">
+      <label for="text">
+        <textarea cols="100" rows="2" id="name" placeholder="닉네임"></textarea>
+        <textarea
+          cols="100"
+          rows="20"
+          id="text"
+          placeholder="게시글"
+        ></textarea>
+      </label>
+      <button type="submit">등록</button>
+    </form>
+    <ul id="list"></ul>
+    <script src="index.js"></script>
+  </body>
+</html>
