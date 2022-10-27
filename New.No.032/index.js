@@ -40,6 +40,7 @@ app.use(
     name: "session",
   })
 );
+app.use(cors());
 
 app.use("/api", listApi);
 
