@@ -1,0 +1,36 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ws socket</title>
+  </head>
+  <body>
+    <button id="send_msg">보내기</button>
+    <button id="end_msg">끊기</button>
+    <script>
+      // html은 서버에서 응답이 무조건 있어야하지만, 웹소켓은 응답과는 상관 없이 보내면 끝이다.
+      const sendBtn = document.getElementById("send_msg");
+      const endBtn = document.getElementById("end_msg");
+      function socket() {
+        const webSocket = new WebSocket("ws://localhost:8080");
+        webSocket.onopen = () => {
+          console.log("socket link");
+        };
+        webSocket.onmessage = (data) => {
+          // 소켓 서버에서 보낸 데이터를 받는 이벤트 함수다
+          console.log(data);
+        };
+        sendBtn.onclick = () => {
+          webSocket.send("testing");
+          // 소켓 서버에 데이터를 보내는 메서드 (보내면 끝)
+        };
+        endBtn.onclick = () => {
+          webSocket.close();
+          console.log("end");
+        };
+      }
+      socket();
+    </script>
+  </body>
+</html>
