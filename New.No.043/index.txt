@@ -1,0 +1,23 @@
+< 11/21 수업 내용 >
+현재 yarn 3.3 버전이 상당히 불안정한 것 같다.
+대부분 create-react-app 이걸 쓴다.
+1. npm list -g << 전역으로 설치된 라이브러리를 확인한다.
+2. sudo npm uninstall -g corepack << 전역으로 설치된 corepack을 삭제
+3. sudo npm i -g yarn << yarn 설치
+4. yarn create react-app testing << react 기본 설치
+(yarn create react-app ./ << 현재 폴더에 react 기본 설치도 가능)
+5. yarn start
+6. npm i styled-components === yarn add styled-components (testing 폴더에서)
+7. npm remove styled-components === yarn remove styled-components
+8. npm install === yarn install (yarn i 는 안됨)
+
+
+const {text, func} = props
+=== props.func();
+
+Hook? 
+- 함수형 컴포넌트에서 클래스형 컴포넌트의 기능들을 사용하기 위해 사용하는 메서드
+- use로 시작한다.
+- 사용자가 구현 가능하다. (보통 '커스텀 훅'이라고 한다.)
+
+yarn build >> build 폴더 > apach로 열면 그동안 react 작업을 한 것을 열 수 있다.
