@@ -85,19 +85,19 @@ function moveSlide(num) {
   slides.style.left = -num * (slideWidth + slideMargin) + "px";
   currentIdx = num;
   // console.log(currentIdx, slideCount);
-  if (currentIdx == 0 || currentIdx == 3 || currentIdx == -3) {
-    btn1.style.backgroundImage = "url('main_prom_on.png')";
-    btn2.style.backgroundImage = "url('main_prom_off.png')";
-    btn3.style.backgroundImage = "url('main_prom_off.png')";
-  } else if (currentIdx == 1 || currentIdx == -2) {
-    btn2.style.backgroundImage = "url('main_prom_on.png')";
-    btn1.style.backgroundImage = "url('main_prom_off.png')";
-    btn3.style.backgroundImage = "url('main_prom_off.png')";
-  } else if (currentIdx == 2 || currentIdx == -1) {
-    btn3.style.backgroundImage = "url('main_prom_on.png')";
-    btn1.style.backgroundImage = "url('main_prom_off.png')";
-    btn2.style.backgroundImage = "url('main_prom_off.png')";
-  }
+  // if (currentIdx == 0 || currentIdx == 3 || currentIdx == -3) {
+  //   btn1.style.backgroundImage = "url('main_prom_on.png')";
+  //   btn2.style.backgroundImage = "url('main_prom_off.png')";
+  //   btn3.style.backgroundImage = "url('main_prom_off.png')";
+  // } else if (currentIdx == 1 || currentIdx == -2) {
+  //   btn2.style.backgroundImage = "url('main_prom_on.png')";
+  //   btn1.style.backgroundImage = "url('main_prom_off.png')";
+  //   btn3.style.backgroundImage = "url('main_prom_off.png')";
+  // } else if (currentIdx == 2 || currentIdx == -1) {
+  //   btn3.style.backgroundImage = "url('main_prom_on.png')";
+  //   btn1.style.backgroundImage = "url('main_prom_off.png')";
+  //   btn2.style.backgroundImage = "url('main_prom_off.png')";
+  // }
   // console.log(btn1, btn2, btn3);
   // console.log(currentIdx);
   if (currentIdx == slideCount || currentIdx == -slideCount) {
@@ -120,44 +120,44 @@ function reset() {
   moveSlide(currentIdx + 1);
 }
 
-btn1.addEventListener("click", () => {
-  pause.style.backgroundImage = "url('main_prom_play.png')";
-  // play.classList.add("active");
-  btn1.style.backgroundImage = "url('main_prom_on.png')";
-  btn2.style.backgroundImage = "url('main_prom_off.png')";
-  btn3.style.backgroundImage = "url('main_prom_off.png')";
-  btn1 == moveSlide(3);
-  clearInterval(slideImg);
-});
+// btn1.addEventListener("click", () => {
+//   pause.style.backgroundImage = "url('main_prom_play.png')";
+//   // play.classList.add("active");
+//   btn1.style.backgroundImage = "url('main_prom_on.png')";
+//   btn2.style.backgroundImage = "url('main_prom_off.png')";
+//   btn3.style.backgroundImage = "url('main_prom_off.png')";
+//   btn1 == moveSlide(3);
+//   clearInterval(slideImg);
+// });
 
-btn2.addEventListener("click", () => {
-  pause.style.backgroundImage = "url('main_prom_play.png')";
-  btn1.style.backgroundImage = "url('main_prom_off.png')";
-  btn2.style.backgroundImage = "url('main_prom_on.png')";
-  btn3.style.backgroundImage = "url('main_prom_off.png')";
-  btn2 == moveSlide(1);
-  clearInterval(slideImg);
-});
+// btn2.addEventListener("click", () => {
+//   pause.style.backgroundImage = "url('main_prom_play.png')";
+//   btn1.style.backgroundImage = "url('main_prom_off.png')";
+//   btn2.style.backgroundImage = "url('main_prom_on.png')";
+//   btn3.style.backgroundImage = "url('main_prom_off.png')";
+//   btn2 == moveSlide(1);
+//   clearInterval(slideImg);
+// });
 
-btn3.addEventListener("click", () => {
-  pause.style.backgroundImage = "url('main_prom_play.png')";
-  btn1.style.backgroundImage = "url('main_prom_off.png')";
-  btn2.style.backgroundImage = "url('main_prom_off.png')";
-  btn3.style.backgroundImage = "url('main_prom_on.png')";
-  btn3 == moveSlide(2);
-  clearInterval(slideImg);
-});
+// btn3.addEventListener("click", () => {
+//   pause.style.backgroundImage = "url('main_prom_play.png')";
+//   btn1.style.backgroundImage = "url('main_prom_off.png')";
+//   btn2.style.backgroundImage = "url('main_prom_off.png')";
+//   btn3.style.backgroundImage = "url('main_prom_on.png')";
+//   btn3 == moveSlide(2);
+//   clearInterval(slideImg);
+// });
 
-let checkNum = 0;
+// let checkNum = 0;
 
-pause.onclick = () => {
-  checkNum++;
-  if (checkNum % 2 != 0) {
-    pause.style.backgroundImage = "url('main_prom_play.png')";
-    clearInterval(slideImg);
-  } else {
-    pause.style.backgroundImage = "url('main_prom_stop.png')";
-    slideImg = setInterval(reset, 3000);
-    console.log(pause);
-  }
-};
+// pause.onclick = () => {
+//   checkNum++;
+//   if (checkNum % 2 != 0) {
+//     pause.style.backgroundImage = "url('main_prom_play.png')";
+//     clearInterval(slideImg);
+//   } else {
+//     pause.style.backgroundImage = "url('main_prom_stop.png')";
+//     slideImg = setInterval(reset, 3000);
+//     console.log(pause);
+//   }
+// };

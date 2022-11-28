@@ -14,6 +14,7 @@ export default function TempTr({ isHead, tableData, head }) {
         ))}
       </tr>
     );
+    A;
   }
   return (
     <tr>
