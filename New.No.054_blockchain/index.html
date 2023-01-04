@@ -1,0 +1,87 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>안뇽 난 최초 블록! ㅎㅇㅎㅇ 나 생성됨</h1>
+    <h1>초기의 제네시스 블록은 하드 코딩으로 직접 만들어준다.</h1>
+    <div class="flex-box">
+      <div id="block">
+        <!-- 소프트웨어 버전처럼 블록의 버전 -->
+        <label for="">블록 버전 (블록 버전 초기값)</label>
+        <h3 id="version"></h3>
+
+        <label for="">블록 높이 (제네시스 블록 최초의 블록 높이: 0)</label>
+        <h3 id="height"></h3>
+
+        <label for="">블록의 생성 시간(블록이 언제 만들어졌는지의 기록)</label>
+        <h3 id="timestamp"></h3>
+
+        <label for="">이전 블록 해시값</label>
+        <h3 id="previousHash"></h3>
+
+        <label for=""
+          >자신의 블록 해시값(최초 블록이기에 해시값: 0으로 대체)</label
+        >
+        <h3 id="hash"></h3>
+
+        <label for="">머클 루트(최초 블록이기에 머클루트: 0으로 대체)</label>
+        <h3 id="merkleRoot"></h3>
+
+        <label for="">논스(증가시키다가 퀴즈가 풀었을 때 도달한 값)</label>
+        <h3 id="nonce"></h3>
+        <!-- nonce 값을 올리면서 계속 해싱한 값의 0의 갯수가 난이도 보다 많아야 블록을 생성할 수 있다. -->
+        <!-- (채굴)난이도의 갯수 = 0의 개수(해시값 앞부분 0의 갯수) -->
+        <!-- ex) 난이도 10이면 0이 10개 이상이 될때까지 돌린다고 보면 된다 -->
+        <!-- 0에서 생성되는 시간이 기준이 되어 이 기준보다 빠르게 생성되면 난이도를 조절하다가 늦게 생성되면 난이도를 또 조절한다. -->
+        <label for="">난이도(블록의 생성 주기를 조절하기 위한 값)</label>
+        <h3 id="difficulty"></h3>
+
+        <label for="">블록 내용(최초 블록이기에 기사의 제목)</label>
+        <h3 id="data"></h3>
+      </div>
+    </div>
+  </body>
+  <script>
+    const blockData = {
+      // version, height, timestamp, previousHash 등 키 값은 고정 값 (블록 라이브러리를 사용하는 것 같이)
+      version: "1.0.0", // 첫 버전
+      height: 0, // 첫 번째 블록 (인덱스)
+      timestamp: Date.now(), // 생성한 시간, Date.now()
+      previousHash: "0".repeat(64), // 이전 블록이 없으니까 문자열 64자리를 0으로 채움
+      hash: "0".repeat(64), // 블록의 해시도 0으로 다 채움 필요 없음 ()
+      merkleRoot: "0".repeat(64), // 머클루트도 0으로 다 채워줌
+      nonce: 0, // 머클루트도 0으로 다 채워줌
+      difficulty: 0,
+      data: [
+        "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks",
+      ],
+    };
+
+    // hash: 블록을 특정하는 값, 고유 식별자
+    // 해시값은 블록의 생성일, 버전, 머클루트, 이전 블록 해시, 논스가 들어가서 만들어진 값
+    // merkleRoot : 트랜잭션 내용이 머클트리로 구성된 루트 값
+
+    // 해시를 구해주는 함수가 hash에 들어옴
+    // 블록 체인 거래 변경이 불가능한 이유
+    // 블록의 머클루트가 계산에 블록 해시가 포함되어 있기 때문에
+    // 하나의 블록의 내용이 변경되면 변경한 블록부터 다음 블록해시 변경으로 이어지기 때문
+    // - 거래 정보를 변경하면 머클루트가 변경되고, 그로 인해 블록 해시가 변경되고,
+    // 쉽게 말해, 블록의 거래정보를 변경하기 위해서 거래 정보를 변경한 블록부터 다시 채굴해야한다. 뒤의 블록이 다 변경되기 때문에.
+    for (const key in blockData) {
+      //   console.log(block.children[key]);
+      // block 안에 있는 자식들 불러옴
+      console.log(block.children[key]);
+      // 위의 내용은 태그
+      console.log(blockData[key]);
+      // 위의 내용은 객체
+      block.children[key].innerHTML = blockData[key];
+      // 태그의 id 이름이 맞는 태그에 객체의 키값에 맞는 값을 넣어준 것
+    }
+    // key 값을 뽑아줌
+  </script>
+</html>
