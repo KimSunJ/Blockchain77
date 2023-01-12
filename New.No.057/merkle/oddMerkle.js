@@ -45,7 +45,6 @@ const createMerkleRoot = (_data) => {
     const tempArr = [];
     for (let i = 0; i < merkleArr.length; i += 2) {
       if (i + 1 === merkleArr.length) {
-        //
         tempArr.push(merkleArr[i]);
       } else {
         tempArr.push(

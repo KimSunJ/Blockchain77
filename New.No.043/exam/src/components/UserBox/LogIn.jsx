@@ -8,8 +8,7 @@ export default function LogIn({ users, setUser }) {
   const [ablePw, setAblePw] = useState(false);
 
   useEffect(() => {
-    // console.log(userId);
-    setId(userId.length ? userId.match(/[a-z]/gi)?.join("") : "");
+    setId(userId.length ? userId.match(/[a-z]/gi).join("") : "");
     if (userId.length < 5) setAbleId(false);
     else setAbleId(true);
   }, [userId]);
@@ -53,4 +52,5 @@ export default function LogIn({ users, setUser }) {
     </LogInBox>
   );
 }
+
 const LogInBox = styled.div``;
