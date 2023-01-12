@@ -1,0 +1,5 @@
+npm init
+npm i express express-session morgan dotenv cookie-parser
+npm i -D nodemon
+
+>> package.json 내의  "type": "module" 내용은 import 등 ES6 문법을 사용하기 위해서
