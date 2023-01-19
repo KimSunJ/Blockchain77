@@ -40,6 +40,7 @@ a();
 
 // function recursive(a) {
 //   console.log(a);
+// // if(a > 10) return;
 //   recursive(a + 1);
 //   // 재귀함수, 함수 스스로가 스스로를 호출한다.
 //   // 자기 자신을 호출하는 함수

@@ -1,3 +1,5 @@
+// express는 자동으로 parsing 작업을 해준다. => 이 작업들을 수동으로 한 내용
+
 // POST /?name=jkh HTTP/1.1
 // Content-Type: application/json
 // User-Agent: PostmanRuntime/7.29.2
@@ -7,12 +9,12 @@
 // Accept-Encoding: gzip, deflate, br
 // Connection: keep-alive
 // Content-Length: 27
-
+//
 // {
 //     "job":"professor"
 // }
 
-// GET /name=jkh HTTP/1.1
+// GET /?name=jkh HTTP/1.1
 // Host: localhost:4193
 // Connection: keep-alive
 // sec-ch-ua: "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
@@ -115,6 +117,7 @@ const getMessage = (lines) => {
 //     전화번호: "024794050",
 //   },
 // };
+// peer to peer 데이터 주고 받는 과정에서 parsing 작업을 해놓고 보면 편하다 (원시 자료형 => parsing 작업이라고 할 수 있다.)
 
 const parser = (data) => {
   const lines = data.split("\r\n");
