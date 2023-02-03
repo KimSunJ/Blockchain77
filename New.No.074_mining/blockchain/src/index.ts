@@ -41,6 +41,7 @@ app.post("/block/mine", (req: Request, res: Response) => {
 
   const message: IMessage = {
     type: MessageType.allBlock,
+    // 블록이 추가됐으니까 알려주기
     payload: [newBlock],
   };
   ws.broadcast(message);
@@ -75,6 +76,13 @@ app.post("/transaction/send", (req: Request, res: Response) => {
   else {
     ws.addTxPool(result.value);
     ws.updateUTXO(result.value);
+    const message: IMessage = {
+      type: MessageType.addTx,
+      // 트랜잭션이 추가됐으니까 다른 peer들에게 알려주기
+      payload: result.value,
+    };
+    ws.broadcast(message);
+
     res.end();
   }
   console.log("5-12 서명 확인 결과 출력");
