@@ -159,3 +159,8 @@ document.forms["transaction"].onsubmit = async function (e) {
   });
   console.log(data);
 };
+// metamask-account 출력
+document.forms["check"].onsubmit = async function (e) {
+  e.preventDefault();
+  getWallet(e.target["metamask-account"].value);
+};
