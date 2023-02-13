@@ -48,6 +48,36 @@ async function getBalance(_account) {
   // parseInt(result, 16) >> 16진수를 10진수로 나눴다.
 }
 
+const block = async () => {
+  const {
+    data: { result },
+  } = await request({
+    data: {
+      id: 1337,
+      jsonrpc: "2.0",
+      method: "eth_getBlockByNumber",
+      params: ["latest", true],
+    },
+  });
+  console.log(result);
+};
+block();
+
+const txpool = async () => {
+  const {
+    data: { result },
+  } = await request({
+    data: {
+      id: 1337,
+      jsonrpc: "2.0",
+      method: "eth_getTransactionCount",
+      params: ["0x5aebb7e12e0feb44541bb4f1716ee9e3a5d462fd", "latest"],
+    },
+  });
+  console.log(parseInt(result, 16));
+};
+txpool();
+
 async function getWallet(_account) {
   // if (interval !== undefined) mineStop();
   // 다른 계정을 눌렀을 경우 interval을 멈춘다.

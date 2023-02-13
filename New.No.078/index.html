@@ -29,6 +29,7 @@
         placeholder="Password"
         pattern="[A-Za-z0-9]+"
       />
+      <!-- "[A-Za-z0-9]+"에서 +는 []안에 있는 것들이 다 포함 가능하다는 의미 -->
       <input
         type="text"
         id="transaction-account"
@@ -36,6 +37,7 @@
       />
       <select id="select-account"></select>
       <input type="number" id="ether" step="0.001" placeholder="Ether" />
+      <!-- step="0.001" 은 input에서 사용 가능한 단위를 설정해 준 것 -->
       <button>이더 보내기</button>
     </form>
     <form id="new-wallet">
