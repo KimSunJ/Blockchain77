@@ -137,6 +137,7 @@ contract ERC20 is IERC20 {
   mapping(address => uint) public balances;
   mapping(address => mapping(address => uint)) public override allowance;
   // { address : { address : uint } }
+  // {owner : { spender : amount} } | owner(소유자)가 spender(대리인)에게 amount(얼마나 | 소유하고 있는 모든 토큰 or 소유하고 있는 토큰 중의 특정 양) 권한을 줄 것인가 | 권한을 누가 누구에게 얼마나 줄 것인지 저장하는 구간
 
 // 잔액 조회
   function balanceOf(address account) external view overridereturns (uint) {

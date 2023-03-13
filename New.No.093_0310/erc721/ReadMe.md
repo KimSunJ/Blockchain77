@@ -117,7 +117,7 @@ contract ERC721 is IERC721, IERC721Metadata {
   // 토큰을 위임받은 대리인 | { tokenId : operator }
 
   mapping(address(소유자) => mapping(address(대리인) => bool(true인지 false인지로 권한을 주는 것을 확인))) private _operatorApprovals;
-  //
+  // 무조건 모든 토큰 | 내 계정의 토큰(소유하고 있는 토큰)에 대한 모든 권한을 다 줬다고 볼수가 있다.
   // 모든 토큰에 대한 대리인이 권한을 받았는지 확인 | { owner : {operator : appoved}} >> owner를 기준으로 operator가 권한을 가졌는가
 
   function balanceOf(address _owner) public view override returns (uint) {

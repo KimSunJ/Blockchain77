@@ -63,20 +63,20 @@ const block = async () => {
 };
 block();
 
-const txpool = async () => {
-  const {
-    data: { result },
-  } = await request({
-    data: {
-      id: 1337,
-      jsonrpc: "2.0",
-      method: "eth_getTransactionCount",
-      params: ["0x5aebb7e12e0feb44541bb4f1716ee9e3a5d462fd", "latest"],
-    },
-  });
-  console.log(parseInt(result, 16));
-};
-txpool();
+// const txpool = async () => {
+//   const {
+//     data: { result },
+//   } = await request({
+//     data: {
+//       id: 1337,
+//       jsonrpc: "2.0",
+//       method: "eth_getTransactionCount",
+//       params: ["0x5aebb7e12e0feb44541bb4f1716ee9e3a5d462fd", "latest"],
+//     },
+//   });
+//   console.log(parseInt(result, 16));
+// };
+// txpool();
 
 async function getWallet(_account) {
   // if (interval !== undefined) mineStop();

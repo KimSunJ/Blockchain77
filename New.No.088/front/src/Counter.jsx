@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
-import CounterContract from "./contracts/Counter.json";
 import axios from "axios";
-// import { txObj } from "../../back/index";
+import CounterContract from "./contracts/Counter.json";
 
 const Counter = ({ web3, account }) => {
   const [count, setCount] = useState(0);
   const [deployed, setDeployed] = useState();
-  const [send, setSend] = useState();
 
   useEffect(() => {
     (async () => {

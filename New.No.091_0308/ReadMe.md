@@ -1,3 +1,17 @@
+```bash
+cd New.No.091
+mkdir back
+cd back
+npm init -y
+npm i truffle
+npm i -D prettier-plugin-solidity
+npx truffle init
+cd ..
+yarn create react-app front
+cd front
+yarn add web3
+```
+
 # 스마트 컨트렉트의 거래
 
 - CA : Contract Address, 계정 즉 지갑 주소 중 하나, Ether를 갖고 있을 수 있다.
@@ -11,3 +25,9 @@
       // msg.sender, 즉 트랜잭션을 보낸 지갑 계정에 Ether를 보낸다.
   }
   ```
+
+```sh
+npx truffle console
+# CA 잔액을 확인해보자
+web3.eth.getBalance("CA")
+```

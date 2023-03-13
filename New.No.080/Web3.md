@@ -118,7 +118,7 @@ ethereum.on("chainChanged", handler: (chainId:Array<string>)=> void)
 ```js
 ethereum.request({
   method: "eth_getBalance",
-  params: ["0xB9B142a69aADF49fC6192dfC0200DD82De2ff49f"],
+  params: ["계정"],
 });
 ```
 
@@ -153,3 +153,10 @@ ethereum.request({
     method: "eth_requestAccounts",
   };
   ```
+
+```sh
+eth.accounts : 계정 목록 확인
+miner.setEtherbase(eth.accounts[]) : 채굴 계정 설정
+miner.start()
+miner.stop()
+```

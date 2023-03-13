@@ -8,7 +8,9 @@
 
 # Solidity
 
-- 스마트
+- 스마트 컨트랙트 프로그래밍 언어
+- 컴파일하여 ByteCode를 생성
+- ByteCode는 트랜잭션의 data로 저장되어 스마트 컨트랙트 실행 시 사용
 
 # geth 새롭게 개인 네트워크 생성
 
@@ -144,7 +146,7 @@ npx solc --bin --abi ./test.sol
 
 1. 편의를 위해 변수 선언
 
-```j
+```sh
 data = "608060405234...08130033";
 // solc로 생성된 bin 파일 내의 모든 데이터
 txObj = { from: eth.accounts[0], data, gas: 1000000 };
