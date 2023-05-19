@@ -1,0 +1,8 @@
+#id,
+#sign-in.on {
+  display: none;
+}
+#id,
+#sign-in {
+  display: block;
+}

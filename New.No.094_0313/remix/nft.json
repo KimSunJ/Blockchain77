@@ -1,0 +1,15 @@
+{
+  "name": "kiblock7",
+  "description": "testing NFT with Pinata",
+  "image": "https://gateway.pinata.cloud/ipfs/QmRVvmHLBhsaFEzu2i1be9pymbPt1Ty2t8j1jXH59UZ9zE",
+  "addtributes": [
+    {
+      "trait_type": "Rank",
+      "value": 1
+    },
+    {
+      "trait_type": "Type",
+      "value": 1
+    }
+  ]
+}

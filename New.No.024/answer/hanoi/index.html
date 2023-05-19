@@ -1,0 +1,28 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hanoi</title>
+  </head>
+  <body>
+    <script>
+      function hanoi(n, start = 1, end = 3) {
+        let arr = [start, end];
+        let answer = [[arr]];
+        let mid = 6 - start - end;
+        if (n == 1) {
+          return arr;
+        }
+        return [
+          [...hanoi(n - 1, start, mid)],
+          arr,
+          [...hanoi(n - 1, mid, end)],
+        ];
+      }
+
+      console.log(hanoi(1));
+      console.log(hanoi(20));
+    </script>
+  </body>
+</html>

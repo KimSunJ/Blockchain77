@@ -1,0 +1,46 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>report</title>
+  </head>
+  <body>
+    <script>
+      function solution(n) {
+        let numArr = [0, 1];
+        for (let i = 2; i <= n; ++i) {
+          numArr[i] = (numArr[i - 2] % 1234567) + (numArr[i - 1] % 1234567);
+        }
+        return numArr[n] % 1234567;
+      }
+      console.log(solution(0));
+      console.log(solution(1));
+      console.log(solution(2));
+      console.log(solution(3));
+      console.log(solution(4));
+      console.log(solution(5));
+      console.log(solution(6));
+
+      function solution(n) {
+        let answer = 0;
+        if (n < 2) {
+          return n;
+        }
+        // for (let i = 0; i <= n + 3; ++i) {
+        answer = solution(n - 1) + solution(n - 2);
+        // }
+        return answer;
+      }
+      console.log("재귀 " + solution(1));
+      console.log("재귀 " + solution(2));
+      console.log("재귀 " + solution(3));
+      console.log("재귀 " + solution(4));
+      console.log("재귀 " + solution(5));
+      console.log("재귀 " + solution(6));
+      console.log("재귀 " + solution(7));
+      console.log("재귀 " + solution(8));
+      console.log("재귀 " + solution(19));
+    </script>
+  </body>
+</html>

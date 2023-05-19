@@ -1,0 +1,65 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>완전 이진 트리</title>
+  </head>
+  <body>
+    <script>
+      // 숫자 상하관계 상관 없이 왼쪽부터 순서대로 채운다.
+      //  코어 이진 트리 (완전 빈 곳 없이 채워진 트리)
+      class TreeNode {
+        constructor(data) {
+          this.data = data;
+          this.left = undefined;
+          this.right = undefined;
+        }
+        insert(data) {
+          if (!this.left) this.left = node;
+          // 왼쪽이 없는 것
+          else if (!this.right) this.right = node;
+          // 왼쪽이 있는 상태에서 오른쪽이 없는 것
+          else return [this.left, this.right];
+          return [node];
+        }
+      }
+      // node의 insert 함수
+      class CompleteBinaryTree {
+        constructor() {
+          this.root = undefined;
+        }
+        insert(data) {
+          const tempNode = new TreeNode(data);
+          // 노드가 만들어진 상태
+          if (!this.root) this.root = tempNode;
+          else {
+            let tempArr = [this.root];
+            let isInsert = false; // is, boolean값이고, insert, 즉 넣었냐?
+            let idx = 0;
+            while (!isInsert) {
+              const tempResult = tempArr[idx].insert(tempNode);
+              // tempResult는 이름 그대로 임시로 저장한 결과값.
+              // TreeNode의 insert 메서드의 return 값이다.
+              if (tempResult.length == 1) isInsert = true;
+              // node가 넣은 것에 실패했을 경우 성공했을 경우는 tempResult.length == 2
+              else {
+                tempArr = tempArr.concat(tempResult);
+                idx++;
+              }
+            }
+          }
+        }
+      }
+
+      const tempBinaryTree = [9, 9, 9, 9, 9, 9, 9];
+      // [                              root,
+      //           root.left,                        root.right,
+      // root.left.left, root.left.right,  root.right.left, root.right.right]
+      // tempBinaryTree.push(9);
+      // tempBinaryTree.push(9);
+      // tempBinaryTree.push(9);
+      // tempBinaryTree.push(9);
+    </script>
+  </body>
+</html>

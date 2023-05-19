@@ -1,0 +1,93 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rock_swtch</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div>
+      <div class="top-back"></div>
+      <div class="machine">
+        <div class="money">
+          <img src="Mario-Coin.png" alt="" height="50px" />
+          <p><span id="money"></span> ₩</p>
+        </div>
+        <div class="center">
+          <div>
+            <div class="results-box">
+              <div id="win" class="result-box top">이겼다</div>
+              <div id="winwin" class="result-box top">WIN</div>
+            </div>
+            <div id="hand" class="hands" value="1">
+              <div class="hand1">
+                <img src="hand_1.png" alt="" width="200px" id="c0" />
+              </div>
+              <!-- scissors -->
+              <div id="c1" class="hand2">
+                <img src="hand_2.png" alt="" width="200px" />
+              </div>
+              <!-- rock -->
+              <div id="c2" class="hand3">
+                <img src="hand_3.png" alt="" width="200px" />
+              </div>
+              <!-- paper -->
+            </div>
+            <div class="results-box">
+              <div id="lose" class="result-box bottom">졌다</div>
+              <div id="draw" class="result-box bottom">비겼다</div>
+            </div>
+          </div>
+          <div>
+            <div class="coin"><span> insert coin 100₩ </span></div>
+            <img id="slot" class="slot-img" src="coinslot.jpeg" alt="" />
+
+            <div class="coin"><span> insert coin 100₩ </span></div>
+          </div>
+        </div>
+        <div id="getcoin" class="coint">
+          <ul class="cointable" type="none">
+            <li>20</li>
+            <li>2</li>
+            <li>1</li>
+            <li>5</li>
+            <li>3</li>
+            <li>2</li>
+            <li>3</li>
+            <li>2</li>
+            <li>3</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>7</li>
+            <li>1</li>
+          </ul>
+        </div>
+        <div class="pla">
+          <div id="player1" class="player">
+            <button id="p0" class="btn1" value="0">
+              <img src="scissors.png" alt="" width="60px" />
+            </button>
+            <button id="p1" class="btn2" value="1">
+              <img src="rock.png" alt="" width="60px" />
+            </button>
+            <button id="p2" class="btn3" value="2">
+              <img src="paper.png" alt="" width="60px" />
+            </button>
+          </div>
+          <div class="st">
+            <button id="start" class="btn4">도전</button>
+            <button id="stop" class="btn5">스톱</button>
+          </div>
+        </div>
+      </div>
+      <div class="top-back"></div>
+      <div class="mario">
+        <img src="mario-v.png" alt="" width="540px" />
+        <!-- <img src="pixel-mario.png" alt="" width="130px" /> -->
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

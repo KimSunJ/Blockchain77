@@ -1,0 +1,18 @@
+yarn이란
+- React가 Facebook에서 만든거다
+- Yarn은 React에 최적화하기 위해서 Facebook에서 만든 패키지 매니저이다.
+- npm이랑 약간은 다르다 => node 18버전 들어오면서 패치됨
+- 설치법 : (sudo) npm i -g corepack (현재버전 1.22.19) => powersell에선 설치 안됨 (node 버전마다 다름)
+- 2. yarn create react-app '파일명'
+
+</React.StrictMode>
+- 엄격모드로, 삭제했다가 다시 추가해주는 역할을 한다. (한번 넣었다가 다시 넣어줄게 하는 역할)
+
+
+bind(this)
+-> 함수 내에서 this가 무엇인지 알려주는 애
+
+class에서 this는 자기 자신을 뜻한다.
+
+npm i styled-components
+>> package.json > styled-components: "^5.3.6"

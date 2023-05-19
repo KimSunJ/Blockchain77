@@ -67,6 +67,7 @@ div {
 .ofh {
   overflow: hidden;
 }
+
 .text {
   font-size: 16px;
   /* 글씨의 크기, PC 크롬 기준 기본값이 16px */

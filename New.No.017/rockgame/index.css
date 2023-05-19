@@ -1,0 +1,274 @@
+.machine {
+  /* display: flex; */
+  width: 500px;
+  /* height: 800px; */
+  background-color: rgba(0, 106, 255);
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: relative;
+  padding: 20px;
+}
+
+.money {
+  display: flex;
+  width: 500px;
+  height: 80px;
+  background-color: black;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  color: white;
+  /* text-align: center; */
+  /* justify-content: center; */
+}
+
+.monimg {
+  margin: 15px;
+}
+
+.money > p {
+  /* display: inline; */
+  text-align: center;
+  font-size: 30px;
+  margin-left: 150px;
+}
+
+.wine,
+.wink {
+  display: inline-flex;
+  border-radius: 10px;
+  width: 150px;
+  height: 80px;
+  background-color: red;
+  position: absolute;
+  /* font-weight: bold; */
+  font-size: 30px;
+  color: white;
+  text-shadow: none;
+}
+
+.wine,
+.wink span {
+  justify-content: center;
+  align-items: center;
+  /* padding: 0; */
+}
+
+.wink span {
+  justify-content: center;
+  align-items: center;
+}
+
+.coin,
+.coin2 {
+  display: inline-flex;
+  width: 138px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: lightblue;
+  position: absolute;
+  /* margin-left: 360px; */
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+/* 
+.coin,
+.coin2 text {
+  justify-content: center;
+  align-items: center;
+} */
+
+.center {
+  display: inline-flex;
+}
+
+.coinslot {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 350px;
+  /* margin-top: 100px; */
+}
+
+.coin2 {
+  margin-top: 430px;
+}
+
+.slot {
+  margin-top: 90px;
+}
+
+.lose,
+.draw {
+  display: inline-flex;
+  width: 150px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: yellow;
+  position: absolute;
+  margin-top: 10px;
+  font-size: 30px;
+  color: red;
+  text-shadow: none;
+}
+
+.lose,
+.draw text {
+  justify-content: center;
+  align-items: center;
+}
+
+.wink {
+  text-align: center;
+  margin-left: 160px;
+}
+
+.draw {
+  margin-left: 160px;
+}
+
+.hands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 310px;
+  height: 300px;
+  /* border-radius: 100%; */
+  background-color: black;
+  position: absolute;
+  margin: 90px 0px;
+}
+
+.hand1 {
+  display: none;
+  position: relative;
+}
+
+.hand2 {
+  display: none;
+  position: absolute;
+}
+
+.hand3 {
+  display: none;
+  position: absolute;
+}
+
+.pla {
+  display: flex;
+}
+
+.player,
+.st {
+  margin-top: 10px;
+  display: flex;
+}
+
+.btn1,
+.btn2,
+.btn3,
+.btn4,
+.btn5 {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  /* box-shadow: 1px 0px 0px #1976d2; */
+}
+
+.btn4,
+.btn5 {
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+}
+
+tr,
+th {
+  position: absolute;
+}
+
+.coint {
+  margin-top: 100px;
+}
+
+.cointable {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  background-color: rgb(55, 121, 55);
+  height: 40px;
+  font-size: 20px;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding-left: 0px;
+  /* border: 1px solid black; */
+}
+
+.coint li {
+  display: flex;
+  background-color: yellowgreen;
+  border: 1px solid black;
+  align-items: center;
+  padding: 7px;
+  /* height: 38px; */
+}
+
+@keyframes trans-img {
+  /* 0% { */
+  /* background-image: url(./hand_1.png); */
+  /* } */
+  /* 32.9% { */
+  /* background-image: url(./hand_1.png); */
+  /* } */
+  /* 33% { */
+  /* background-image: url(./hand_2.png); */
+  /* } */
+  /* 66.9% { */
+  /* background-image: url(./hand_2.png); */
+  /* } */
+  /* 67% { */
+  /* background-image: url(./hand_3.png); */
+  /* } */
+  /* 100% { */
+  /* background-image: url(./hand_3.png); */
+  /* } */
+  from {
+    background-image: url(./hand_2.png);
+  }
+  24.9% {
+    background-image: url(./hand_2.png);
+  }
+  25% {
+    background-image: url(./hand_1.png);
+  }
+  66.9% {
+    background-image: url(./hand_1.png);
+  }
+  70% {
+    background-image: url(./hand_3.png);
+  }
+  to {
+    background-image: url(./hand_3.png);
+  }
+}
+
+.hands {
+  animation-name: trans-img;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* animation-timing-function: alter; */
+  /* animation: trans-img 2s infinite linear; */
+  animation-play-state: running;
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}

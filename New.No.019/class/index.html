@@ -1,0 +1,103 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class</title>
+  </head>
+  <body>
+    <div>sldkfjsldkfj</div>
+    <script>
+      console.log(new Date());
+      console.log(new Set([1, 2, 3]));
+      // new 뒤에 붙는 것들이 class를 생성하는 것이다.
+      class Block7 {
+        // Block7 클래스를 선언했다.
+        constructor(count) {
+          // 생성자 : 생성자를 기준으로 객체를 생성한다.
+          this.count = count;
+          // 클래스의 count를 선언, 정의 즉 초기화한다.
+          // 매개변수 count로
+          // this는 객체다. 즉, 생성되는 객체의 count 키에 count 값을 초기화한거다.
+          this.name = name;
+        }
+        consoleLog() {
+          // 클래스의 메서드를 선언한다.
+          console.log("클래스 블록7기의" + this.count + "번째 학생입니다.");
+        }
+      }
+      const block7 = new Block7(1);
+      // 이것이 count로 들어간다.
+      // Block7 클래스를 새롭게 생성한다.
+      // 생성된 객체는 Block7을 기준으로 하기 때문에 개발자 도구에 이름이 붙어있다.
+      // new Block7, 즉 new를 붙이고 호출 시 constructor를 호출한다.
+      // 매개변수는 constructor의 매개변수로 전달된다.
+      // 자바스크립트에 원래 클래스 없었으나 C++, C#, Java 등을 사용하는 개발자들의 요청으로 추가되었다.
+      block7.consoleLog();
+      // block7의 consoleLog 메서드를 호출한다.
+      console.log(block7);
+      // block7 확인
+      const block7Obj = {
+        count: 1,
+        consoleLog() {
+          console.log("객체 블록7기의" + this.count + "번째 학생입니다.");
+        },
+      };
+      block7Obj.consoleLog();
+      // 메서드 호출
+      console.log(block7Obj);
+      // 클래스는 일종의 도장이라고 생각하면 된다.
+      // 위에서는 class => class 명령어로 클래스 선언
+
+      // ======================================
+
+      // 아래는 함수형으로 클래스 선언
+      function Block7Func(count) {
+        this.count = count;
+      }
+      Block7Func.prototype.consoleLog = function () {
+        // console.log(this);
+        // 화살표 함수의 this = root 다 -> 화살표 함수에선 this.count가 먹히지 않는다.
+        console.log("클래스 블록7기의" + this.count + "번째 학생입니다.");
+      };
+
+      // window.count =
+      // Block7Func.prototype.consoleLog1 = () => {
+      //   console.log(this);
+      //   console.log(this.count);
+      // };
+      const block7func = new Block7Func(2);
+      block7func.consoleLog();
+      //   block7func.consoleLog1();
+      console.log(block7func);
+
+      class Student extends Block7 {
+        // extends를 사용하여 Block7을 상속받아 Student 클래스를 생성한다.
+        constructor(name, count) {
+          // 생성자 : new 붙여서 생성할 때 사용되는 코드
+          // 하나는 직접 연결 하나는 super에 연결 / constructor 클래스 당 하나여야한다
+          super(count);
+          // 부모(Block7)의 constructor(count)를 말한다.
+          // this.count(count); 와 같은 의미다.
+          // super << 부모의 생성자. Block7의 생성자다. new Block7(number)
+          // super는 부모의 생성자 함수를 호출한다.
+          this.name = name;
+        }
+        consoleLog() {
+          // 메서드를 만드는 것 (consoleLog)
+          console.log("이름은" + this.name + "입니다.");
+          // 매서드를 가져오는 것 (console.log)
+          super.consoleLog();
+          // 부모의 consoleLog()를 가져오는 것이다.
+          // 즉, consoleLog() {console.log("클래스 블록7기의" + this.count + "번째 학생입니다.");} 인 것이다.
+        }
+      }
+      // extends는 유전과 같은 개념이다
+      // ex) class Student extends Block7 >> 기본적으로 Block7의 내용을 가지고 있으면서 Student의 클래스도 갖는다.
+      const kjk = new Student("김정규", 1);
+      kjk.consoleLog();
+      console.log(kjk);
+      console.log(new Date());
+    </script>
+  </body>
+</html>

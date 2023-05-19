@@ -1,0 +1,46 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버블 정렬</title>
+    <!-- 정렬 item 개수만큼 처음부터 확인하고 또 확인하는 것 오름차순으로 정렬될때까지 정렬해주지만, 정렬하고도 아이템 개수 이전에 정렬되어도-->
+  </head>
+  <body>
+    <script>
+      function swap(arr, idx1, idx2) {
+        const temp = arr[idx1];
+        arr[idx1] = arr[idx2];
+        arr[idx2] = temp;
+      }
+
+      const dataArr = [
+        727, 129, 621, 333, 100, 708, 1112, 1121, 1229, 214, 1818, 500, 6, 8282,
+        119, 3838,
+      ];
+
+      function bubbleSort(arr) {
+        // o(n^2) -> 느리다~ / for문이 두번
+        const tempArr = [...arr]; // 원본을 수정하지 않기 위해서 스프레드 임시 배열을 사용한다.
+        // reverse, sort는 원본을 바꾼다. forEach, map도 원본을 수정하지 않은 상태에서 배열을 사용한다.
+        // [1, 2, 3]
+        for (let i = 0; i < tempArr.length; ++i) {
+          // 0 ~ tempArr.length - 1까지 i를 실행한다. i = 0 => 1 => 2
+          // tempArr.length 번 돌린다.
+          for (let j = 0; j < tempArr.length - 1; ++j) {
+            // for (let j = 0; j < tempArr.length - i; ++j)도 가능
+            // 0 ~ tempArr.length - 2까지 j를 실행한다. j = 0 => 1
+            // j와 j + 1을 비교하기 때문에, 즉 j+1이 tempArr.length보다 작아야한다. j + 1 = 3 length 마지막 아이템과 비교할 상대가 없어서 -1을 하는 것이다
+            if (tempArr[j] > tempArr[j + 1]) swap(tempArr, j, j + 1);
+          }
+        }
+        return tempArr;
+      }
+      console.log(dataArr);
+      console.time("bubbleSort");
+      console.log(bubbleSort(dataArr));
+      console.timeEnd("bubbleSort");
+      console.log(dataArr);
+    </script>
+  </body>
+</html>

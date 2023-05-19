@@ -1,0 +1,125 @@
+div {
+  border: 1px solid black;
+  width: 420px;
+  height: 419px;
+
+  overflow: hidden;
+}
+
+.transform-translate img {
+  transform: translate(100px, 100px);
+  /* 
+  transform 이란? 
+  - 모양 이동, 수정
+  */
+  /* translate 함수는 이동 */
+}
+
+.transform-translateX img {
+  transform: translateX(100px);
+  /* translateX 함수는 가로 이동 */
+}
+
+.transform-translateY img {
+  transform: translateY(100px);
+  /* translateY 함수는 세로 이동 */
+}
+
+.transform-scale img {
+  transform: scale(0.5, 2);
+  /* 
+    scale, 확대, 1이 기본 크기
+    배율이라고 생각하면 됨, 0.5 = 50%
+    scale(X값, Y값) > translate 처럼 X,Y 가 있다.
+    */
+}
+
+.transform-skew img {
+  transform: skew(15deg, 30deg);
+  /* 
+  회전
+  skew(X값, Y값) > translate 처럼 X,Y 가 있다.
+  */
+}
+
+.transform-rotate img {
+  transform: rotate(45deg);
+  /* 
+    Z축 회전 (기본값은 이미지의 가운데 축)
+    우리가 보기엔 축이 점이다.
+  */
+}
+
+.transform-origin img {
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+  /* 
+      transform: rotate (deg)에게
+      origin 은 기준을 부여하는 축이다.
+      x y 순으로 설정한다.
+    */
+}
+
+.transition img {
+  /* transition: transform 3s ease; */
+  transition: transform 3s linear, border 1s ease-in-out,
+    border-radius 1s ease-in-out;
+
+  /* 
+  transition 은 애니메이션 효과를 주긴 하는데,
+  CSS 스타일이 변화하는 것에 대해서 설정한다.
+  transform X
+  transform 에 대해서 변화하는 시간과 변화하는 방법에 대해서 설정한다.
+  */
+}
+
+.transition:hover img {
+  transform: rotate(720deg);
+  border: 10px dashed red;
+  /* 
+  border 값이 마우스를 갖다 댔을 때 10px로 두꺼워지는 이유
+  기본값으로 border > none 이기 때문이다.
+   */
+  border-radius: 100%;
+  /* transform으로 회전을 넣음 */
+}
+
+@keyframes myanimation {
+  /* 에니메이션 설정한다 (@keyframes는 클라스와 같은 역할을 한다 */
+  0% {
+    /* from */
+    /* 전체 시간의 0%일 때 */
+    transform: rotate(0);
+  }
+  50% {
+    /* 전체 시간의 50%일 때 */
+    transform: rotate(360deg);
+  }
+  100% {
+    /* to */
+    /* 전체 시간의 100%일 때 */
+    transform: rotate(0);
+  }
+}
+
+.animation:hover img {
+  animation: myanimation 3s ease;
+  /* animation: keyframes 이름 시간 변화방법 */
+}
+
+.animation:hover .text {
+  animation: myanimation 3s ease;
+}
+
+.animation {
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: red;
+  font-weight: 700;
+  background-color: whitesmoke;
+}

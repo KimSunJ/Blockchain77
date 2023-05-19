@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function solution(num) {
+        let answer = 0;
+        while (answer <= 500) {
+          if (num === 1) return answer;
+          num = num % 2 === 0 ? num / 2 : num * 3 + 1;
+          answer += 1;
+        }
+        return -1;
+      }
+      //
+      function solution(num) {
+        let answer = 0;
+        while (answer <= 500) {
+          if (num === 1) return answer;
+          if (num % 2 === 0) {
+            num = num / 2;
+            answer += 1;
+          } else {
+            num = num * 3 + 1;
+            answer += 1;
+          }
+        }
+        return -1;
+      }
+      console.log(solution(6));
+      console.log(solution(16));
+      console.log(solution(626331));
+
+      // report
+      function solution(num) {
+        let answer = 0;
+        for (; num != 1 && answer < 500; answer++) {
+          if (num % 2 == 0) {
+            num /= 2;
+          } else {
+            num = num * 3 + 1;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
