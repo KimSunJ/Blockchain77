@@ -1,3 +1,12 @@
 node_modules
 */.DS_Store
 build
+.env
+node_modules
+package.json
+package-lock.json
+truffle-config.json
+tsconfig.json
+nft.json
+.abi
+.bin
